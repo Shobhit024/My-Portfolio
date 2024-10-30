@@ -203,8 +203,9 @@ footer div {
 
   /* Navbar styles */
   nav {
-    height: auto; /* Allow flexible height for the nav */
-    padding: 22px 0;
+    display: block;
+    height: 50px; /* Allow flexible height for the nav */
+    padding: 21px 0;
   }
 
   nav ul {
@@ -217,13 +218,16 @@ footer div {
   nav ul li {
     margin: 10px 0; /* Add space between list items */
   }
+  .left {
+    font-size: 1.1rem;
+  }
 
   /* Hamburger Menu */
   .hamburger {
     padding-right: 5%;
     display: flex; /* Display hamburger menu on mobile */
     justify-content: flex-end;
-    width: 100%; /* Full width to align properly */
+    width: 90%; /* Full width to align properly */
   }
 
   .right ul {
@@ -255,7 +259,7 @@ footer div {
   .centersection {
     font-size: 1.5rem; /* Smaller font size on mobile */
     margin: 0;
-    padding-top: 18%;
+    padding-top: 26%;
     padding-bottom: 6%;
   }
 
@@ -278,12 +282,17 @@ footer div {
   }
 
   .intro {
-    width: 90%; /* Increase width on smaller screens */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 90%;
+    padding: 5%;
   }
 
   .selfintro01 {
     font-size: 1rem; /* Smaller font size */
-    padding: 10px;
+    padding: 12px 0;
   }
 
   /* Social media icons */
@@ -323,6 +332,7 @@ footer div {
   }
 
   footer div {
-    flex-direction: column; /* Stack footer elements */
+    flex-direction: column;
+    padding: 5px 0;
   }
 }
