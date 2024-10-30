@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(16, 3, 22, 0.992);
+  color: white;
+}
+.embed {
+  margin: 0;
+  padding: 0;
+  display: contents;
+}

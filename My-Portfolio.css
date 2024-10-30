@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Poppins Bold";
+  src: url("C:\Users\Hp\Downloads\Poppins\Poppins-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Hamburger menu styles */
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.right ul {
+  display: flex;
+}
+
+body {
+  background-color: rgba(16, 3, 22, 0.992);
+  color: white;
+}
+nav {
+  margin-top: -22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(32, 23, 36);
+  position: fixed;
+  width: 100%;
+  background: #b883da4d;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+  position: relative; /* Required for the circle effect */
+  transition: color 0.2s; /* Smooth color transition */
+}
+
+a {
+  text-decoration: none; /* Remove the underline */
+  color: white; /* Set the text color to white */
+  transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+a:hover {
+  color: #050404;
+}
+
+nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  height: 200%;
+
+  background-color: rgba(229, 225, 234, 0.3); /* Circle background color */
+  transform: translate(-50%, -50%) scale(0); /* Start with a scale of 0 */
+  transition: transform 0.6s; /* Smooth transition */
+  z-index: -1; /* Place behind text */
+}
+
+nav ul li:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Scale to full size on hover */
+}
+
+.container01 {
+  display: flex;
+  justify-content: space-between;
+}
+.leftsection {
+  width: 90%;
+  display: flex;
+}
+.left {
+  font-size: 1.5rem;
+}
+.left:hover {
+  filter: drop-shadow(2px 2px 1px rgb(21, 199, 169));
+}
+.firstsection {
+  padding-bottom: 200px;
+}
+
+.centersection {
+  padding-top: 7%;
+  display: flex;
+  justify-content: center;
+  margin: 23px 0;
+  font-size: 2rem;
+}
+#pic01 {
+  height: 400px;
+}
+.rightsection {
+  padding-right: 4%;
+  display: flex;
+  justify-content: right;
+  filter: drop-shadow(5px 5px 6px rgb(199, 21, 21));
+}
+.secondsection {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 4%;
+}
+.intro {
+  justify-content: space-around;
+  width: 60%;
+  color: bisque;
+  font-size: 2rem;
+}
+.ullist {
+  padding-left: 3%;
+}
+.selfintro01 {
+  color: white;
+  padding: 14px;
+  font-size: 1.3rem;
+}
+
+#pic02 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid purple;
+  display: inline-block;
+}
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  flex-direction: column;
+}
+#f00p {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+footer {
+  height: 60px;
+  background-color: rgb(15, 8, 8);
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+}
+#typewriter {
+  font-family: monospace;
+  font-size: 24px;
+  white-space: normal; /* Allow text to wrap */
+  display: inline; /* Change from block to inline for cursor alignment */
+  width: 50%; /* Limit to 50% of the screen width */
+  margin: 0 auto; /* Center it horizontally */
+
+  padding-right: 5px;
+}
+
+.cursor {
+  border-right: 2px solid;
+  animation: blink 0.9s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.conectme {
+  padding: 18px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.conectme:hover {
+  transform: scale(1.1) rotate(-10deg);
+  background-color: rgba(15, 197, 173, 0.2);
+  filter: brightness(1.6) drop-shadow(5px 5px 6px rgb(15, 197, 173));
+}
+/* Media Queries for mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjust body padding and margins for smaller screens */
+  body {
+    margin: 0;
+  }
+
+  /* Navbar styles */
+  nav {
+    height: auto; /* Allow flexible height for the nav */
+    padding: 22px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Add space between list items */
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    padding-right: 5%;
+    display: flex; /* Display hamburger menu on mobile */
+    justify-content: flex-end;
+    width: 100%; /* Full width to align properly */
+  }
+
+  .right ul {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    background-color: rgba(32, 23, 36, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+
+  .right ul.show {
+    display: flex; /* Show menu when toggled */
+  }
+  .firstsection {
+    padding-bottom: 15%;
+  }
+  /* Adjust sections */
+  .container01 {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center-align content */
+  }
+
+  .leftsection,
+  .rightsection {
+    justify-content: center; /* Center content on mobile */
+  }
+
+  /* Center Section */
+  .centersection {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+    margin: 0;
+    padding-top: 18%;
+    padding-bottom: 6%;
+  }
+
+  #pic01 {
+    padding-top: 10%;
+    height: 350px; /* Adjust image size on mobile */
+  }
+
+  /* Self-intro image */
+  #pic02 {
+    width: 150px; /* Smaller size for mobile */
+    height: 150px;
+    border: 3px solid purple; /* Adjust border size */
+  }
+
+  /* Second section */
+  .secondsection {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .intro {
+    width: 90%; /* Increase width on smaller screens */
+  }
+
+  .selfintro01 {
+    font-size: 1rem; /* Smaller font size */
+    padding: 10px;
+  }
+
+  /* Social media icons */
+  .socialmedia {
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  #f00p {
+    font-size: 1.5rem; /* Smaller heading size */
+  }
+
+  /* Typewriter text */
+  #typewriter {
+    font-size: 18px; /* Smaller font for mobile */
+    width: 90%; /* Expand to more width */
+  }
+
+  /* Contact section */
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .conectme {
+    height: 50px; /* Smaller buttons */
+    width: 50px;
+  }
+
+  /* Footer */
+  footer {
+    height: auto; /* Flexible height */
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  footer div {
+    flex-direction: column; /* Stack footer elements */
+  }
+}
