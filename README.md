@@ -5,9 +5,7 @@ Table of Contents
 * About the Project
 * Features
 * Technologies Used
-* Getting Started
-* Project Structure
-* Contact.
+
 
 About the Project :-
 This portfolio website serves as a platform to display my professional skills, projects, and personal interests. Through this site, you can explore my journey in web development, learn about the technologies I’ve worked with, and view some of my highlighted projects.
