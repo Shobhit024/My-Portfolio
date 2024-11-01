@@ -1,7 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
 body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(16, 3, 22, 0.992);
   color: white;
 }
+main {
+  flex: 1; /* This makes main content take up the available space */
+}
+
 .mernstack {
   display: flex;
   justify-content: center;
@@ -66,6 +81,8 @@ body {
   justify-content: space-evenly;
 }
 body {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(16, 3, 22, 0.992);
   color: white;
 }
@@ -166,10 +183,45 @@ body {
 footer {
   height: 60px;
   background-color: rgb(15, 8, 8);
+  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 footer div {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .mernstack {
+    padding: 5% 11%;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .frontendpic,
+  .reactpic,
+  .nodepic,
+  .expresspic,
+  .mongoDbpic,
+  .dsapics,
+  .databse {
+    height: 50px;
+    width: 50px;
+  }
+  .greenpoint,
+  .greenpoint-t {
+    height: 6px;
+    width: 6px;
+    margin: 7px 10px;
+  }
+  footer {
+    height: auto;
+    padding: 15px 0;
+  }
+  footer div {
+    flex-direction: column;
+    padding: 5px 0;
+  }
 }
